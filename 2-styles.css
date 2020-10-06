@@ -1,0 +1,63 @@
+body {
+    font-size: 62.5%;
+}
+
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    display: block;
+    height: 35px;
+    width: 90px;
+    border-radius: 35px;
+    background-color: #ebebeb;
+    position: relative;
+    transition: background-color .7s ease-out;
+}
+
+input:checked + label {
+    background-color: #e2463d;
+    transition: background-color .7s ease-out;
+}
+
+label .toggle-inner {
+    position: absolute;
+    top: 4px;
+    left: 47.5%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.toggle-inner::after {
+    content: "No";
+    color: #c3c3c3;
+}
+
+input:checked + label .toggle-inner {
+    left: 14%;
+}
+
+input:checked + label .toggle-inner::after {
+    content: "Yes";
+    color: white;
+}
+
+.toggle-switch {
+    position: absolute;
+    height: 96%;
+    width: 34px;
+    border-radius: 50%;
+    border: 2px solid #c3c3c3;
+    top: -2px;
+    left: 0px;
+    background-color: #fff;
+    transition: left .4s ease-in-out;
+}
+
+input:checked + label > .toggle-switch {
+    top: -2px;
+    left: 60%;
+    transition: left .4s ease-in-out;
+}
